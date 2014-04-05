@@ -27,9 +27,7 @@
 
 @implementation ViewController
 
-
 #pragma mark - Life Cycle
-
 
 - (void)viewDidLoad
 {
@@ -45,8 +43,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 #pragma mark - UIPickerViewDelegate
 
@@ -149,9 +145,7 @@
     if (viewNumber == 1)
     {
         self.my1View = view;
-        NSLog(@"drawView self.my1View = %@", self.my1View);
         [self.view addSubview:self.my1View];
-        
     }
     else if (viewNumber == 2)
     {
@@ -189,8 +183,6 @@
         [self.view addSubview:self.my8View];
     }
 }
-
-
 
 #pragma mark - Open picker
 
@@ -232,9 +224,6 @@
 - (void) doneButtonClicked: (id) sender
 {
     [self.actionSheetPicker dismissWithClickedButtonIndex:0 animated:YES];
-    
-    //int row = [self.picker selectedRowInComponent:0];
-    //[self setViewForRow:row];
 
     for (UIView *view in self.actionSheetPicker.subviews)
     {
